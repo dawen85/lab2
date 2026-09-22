@@ -14,13 +14,18 @@
     font-family: "CAC Champagne";
     src: url("fonts/cac_champagne.woff") format("woff"),
          url("fonts/cac_champagne.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
     font-family: "DobkinPlain";
     src: url("fonts/DobkinPlain.woff") format("woff"),
          url("fonts/DobkinPlain.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
 }
+
 
 /* 3c, 3h: Global body styles, background/text color, margin and padding */
 body {
