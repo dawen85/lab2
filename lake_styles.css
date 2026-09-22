@@ -1,0 +1,201 @@
+﻿@charset "utf-8";
+/* 3a: Define character encoding for css file */
+
+/*
+   New Perspectives on HTML5 and CSS3, 7th Edition
+   Tutorial 2 Case Problem 4 - The Great Lakescape Lodge
+   Filename: lake_styles.css
+   Author:Wang Junjie
+   Date:2026.9.22
+*/
+
+/* 3b: Import web fonts (woff + ttf format) */
+@font-face {
+    font-family: "CAC Champagne";
+    src: url("fonts/cac_champagne.woff") format("woff"),
+         url("fonts/cac_champagne.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "DobkinPlain";
+    src: url("fonts/DobkinPlain.woff") format("woff"),
+         url("fonts/DobkinPlain.ttf") format("truetype");
+}
+
+/* 3c, 3h: Global body styles, background/text color, margin and padding */
+body {
+    background-color: #f7f1e3;
+    color: #3d2b4f;
+    font-family: "DobkinPlain", cursive;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* 3j: CSS Grid layout for page header */
+header {
+    background-color: #2e1a33;
+    color: #f7f1e3;
+    display: grid;
+    grid-template-rows: auto auto;
+    padding-bottom: 10px;
+}
+
+/* 3e: Child element selector for header image */
+header > img {
+    margin: 0;
+}
+
+/* 3j: Flexbox layout for main navigation bar */
+header > nav {
+    display: flex;
+}
+
+header > nav > ul {
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+    list-style: none; /* 3f: Remove default list bullet markers */
+    margin: 10px 0 6px;
+    padding: 0;
+}
+
+/* 3e, 3h: Child selector for navigation list items */
+header > nav > ul > li {
+    padding: 6px 0;
+}
+
+/* 3e: Nested element selector for navigation links */
+header > nav a {
+    color: #f7f1e3;
+    text-decoration: none;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+}
+
+/* 3g: Pseudo-class :hover for link mouse‑over effect */
+header > nav a:hover {
+    color: #e0b8f2;
+    text-decoration: underline;
+}
+
+/* 3g: Pseudo-class :visited for visited hyperlinks */
+header > nav a:visited {
+    color: #c9a7d8;
+}
+
+/* 3e, 3b, 3c: ID selector for left column main heading, use web font and color name */
+#leftcol h1 {
+    font-family: "CAC Champagne", cursive;
+    color: purple;
+    font-size: 2.6em;
+    margin: 18px 0 10px;
+}
+
+#rightcol h2 {
+    font-family: "CAC Champagne", cursive;
+    color: #5a2d82;
+    margin: 16px 0 6px;
+}
+
+/* 3g: Pseudo‑element ::first‑letter style for paragraph drop cap */
+#leftcol > p:first-of-type::first-letter {
+    font-family: "CAC Champagne", cursive;
+    font-size: 2em;
+    color: #5a2d82;
+}
+
+/* 3i: Pseudo‑element ::before to generate decorative content */
+#leftcol h1::before {
+    content: "❦ ";
+    color: #b08cd9;
+}
+
+/* 3d, 3h: Semi‑transparent rgba background, padding and margin */
+#leftcol aside {
+    background-color: rgba(90, 45, 130, 0.10);
+    border: 1px solid rgba(90, 45, 130, 0.25);
+    border-radius: 8px;
+    padding: 10px 16px;
+}
+
+#leftcol aside h1 {
+    font-size: 1.4em;
+    margin: 8px 0 6px;
+}
+
+/* 3f: Custom list‑style marker (circle bullet) */
+#leftcol aside ul {
+    list-style-type: circle;
+    padding-left: 24px;
+}
+
+#leftcol aside li {
+    margin: 6px 0;
+}
+
+#leftcol aside a {
+    color: #5a2d82;
+    text-decoration: none;
+}
+
+#leftcol aside a:hover {
+    text-decoration: underline;
+}
+
+/* 3d: Semi‑transparent background for right sidebar */
+#rightcol {
+    background-color: rgba(90, 45, 130, 0.08);
+    border-radius: 8px;
+    padding: 12px 18px;
+}
+
+/* 3f: Custom square marker for navigation lists */
+#rightcol nav ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+#rightcol nav a {
+    color: #3d2b4f;
+    text-decoration: none;
+    line-height: 1.8;
+}
+
+#rightcol nav a:hover {
+    color: #5a2d82;
+    text-decoration: underline;
+}
+
+/* 3c, 3h: Blockquote styling using color name "white" */
+#rightcol blockquote {
+    background-color: white;
+    color: #3d2b4f;
+    border-left: 4px solid #b08cd9;
+    font-style: italic;
+    margin: 16px 0;
+    padding: 10px 16px;
+}
+
+/* 3i: Generate opening quotation mark character */
+#rightcol blockquote::before {
+    content: "\201C";
+    font-size: 2em;
+    color: #b08cd9;
+}
+
+/* 3c, 3h: Footer styles, hex value + named color */
+footer {
+    background-color: #2e1a33;
+    color: white;
+    text-align: center;
+    padding: 14px 0;
+    margin-top: 24px;
+    font-size: 0.9em;
+}
+
+footer em {
+    font-family: "CAC Champagne", cursive;
+    font-size: 1.3em;
+    font-style: normal;
+}
